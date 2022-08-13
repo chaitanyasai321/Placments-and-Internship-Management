@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	  <TITLE> My first HTML document </TITLE>
+</HEAD>
+<style>
+input[type="email"], input[type="password"]
+{
+	border:none;
+	border-bottom:2px black solid;
+}
+input[type="email"]:focus  {
+  background-color:lightblue;     
+}
+input[type="password"]:focus  {
+  background-color:lightgreen;    
+}
+
+</style>
+<script>
+	function fun()
+	{
+		var str1 = document.getElementById("email").value;
+		var str2 = document.getElementById("pass").value;
+		if(str1=="" && str2=="")
+			alert('Email and Password are compulsory');
+		else if(str1=="")
+			alert('Email is required');
+		else if(str2=="")
+			alert('password is required');
+		else
+			alert('Login successful')
+	}
+
+
+</script>
+<BODY>
+	<center>
+	<h1> LOGIN </h1>
+	<form>
+		Email :<input type="email" id="email" > <br><br>
+		Password: <input type="password" id="pass" > <br><br>
+		<input type="button" id="button" value="Login Button" onclick="fun()" >
+	</form>
+</center>
+</BODY>
+</HTML>
